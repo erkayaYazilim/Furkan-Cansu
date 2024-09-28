@@ -1,0 +1,162 @@
+/* Google Fonts'dan zarif bir yazı tipi eklendi */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Arka plan animasyonu için eklenen stil */
+body {
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #ee9ca7, #ffdde1, #fff0f5, #b35d6a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Arka plan animasyonu tanımı */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Yarı saydam arka plan */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1 {
+    color: #b35d6a;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+input[type="text"], input[type="file"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 15px;
+    border: 2px solid #b35d6a;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #b35d6a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #9a4f5b;
+    transform: scale(1.05);
+}
+
+#progressContainer {
+    margin-top: 20px;
+}
+
+#uploadProgress {
+    width: 100%;
+    max-width: 500px;
+}
+
+#preview {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#preview img, #preview video {
+    max-width: 150px;
+    margin: 10px;
+    border: 2px solid #b35d6a;
+    border-radius: 10px;
+}
+
+/* Mobil cihazlar için uyumlu hale getirme */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    label {
+        font-size: 1.1em;
+    }
+
+    input[type="text"], input[type="file"] {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1.3em;
+    }
+
+    #preview img, #preview video {
+        max-width: 130px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[type="text"], input[type="file"] {
+        padding: 6px;
+        font-size: 0.85em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+
+    #preview img, #preview video {
+        max-width: 100px;
+    }
+}

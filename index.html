@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cansu & Furkan Nişan</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts (Daha şık bir yazı tipi için) -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Cansu & Furkan'ın Nişanına Hoş Geldiniz</h1>
+        <form id="uploadForm">
+            <!-- İsim girişi isteğe bağlı hale getirildi -->
+            <label for="nameInput">İsminizi Girin (İsteğe Bağlı):</label>
+            <input type="text" id="nameInput">
+
+            <label for="fileInput">Fotoğraf veya Video Seçin:</label>
+            <!-- Çoklu dosya yükleme özelliği eklendi -->
+            <input type="file" id="fileInput" accept="image/*,video/*" multiple required>
+
+            <!-- Seçilen dosyaların önizlemesi için alan -->
+            <div id="preview"></div>
+
+            <button type="submit">Yükle</button>
+        </form>
+
+        <!-- Yükleme ilerleme çubuğu -->
+        <div id="progressContainer" style="display: none;">
+            <p>Yükleniyor...</p>
+            <progress id="uploadProgress" value="0" max="100"></progress>
+        </div>
+    </div>
+
+    <!-- Firebase SDK (compat sürümleri kullanıldı) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-storage-compat.js"></script>
+
+    <!-- Firebase yapılandırması -->
+    <script>
+        // Firebase yapılandırma kodunu buraya ekleyin
+        const firebaseConfig = {
+            apiKey: "AIzaSyC61LqMCJ2u94FFP_ficTFi0qAm2s2b5zk",
+            authDomain: "cansufurkan-8514f.firebaseapp.com",
+            projectId: "cansufurkan-8514f",
+            storageBucket: "cansufurkan-8514f.appspot.com",
+            messagingSenderId: "469450478703",
+            appId: "1:469450478703:web:6019d7a41b6508a9b1299a",
+            measurementId: "G-5B0936W17P"
+        };
+
+        // Firebase'i başlat
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- JavaScript kodu -->
+    <script src="app.js"></script>
+</body>
+</html>
